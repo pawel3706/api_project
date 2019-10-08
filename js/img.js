@@ -9,7 +9,7 @@ class Img {
         imgsNum = `&limit=${imgsNum}`;
         startFrom = `&offset=${startFrom}`;
 
-        const apiUrl = `http://api.giphy.com/v1/gifs/${endpoint}?api_key=KcObJAp0J7T8flMTZZHS15bXNTL2hOww${inputValue}${imgsNum}${startFrom}`;
+        const apiUrl = `http://api.giphy.com/v1/gifs/${endpoint}?${inputValue}${imgsNum}${startFrom}`;
 
         fetch(apiUrl)
             .then(response => response.json())
