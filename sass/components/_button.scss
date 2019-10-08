@@ -1,0 +1,21 @@
+.btn {
+    padding: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    // reset styles
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &:hover {
+        color: $active-color;
+        border-color: $active-color;
+        cursor: pointer;
+    }
+}

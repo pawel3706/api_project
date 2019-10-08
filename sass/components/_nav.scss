@@ -1,0 +1,17 @@
+.nav {
+    height: $nav-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $basic-padding 0;
+}
+
+.nav__logo-image {
+    height: calc(#{$nav-height} - #{$basic-padding*2});
+    width: auto;
+    margin-left: -8px;
+}
+
+.nav__search {
+    flex-basis: 60%;
+}

@@ -1,0 +1,24 @@
+.search {
+    display: flex;
+    align-items: stretch;
+}
+
+.search__input {
+    flex-grow: 1;
+    border: 2px solid #fff;
+    background-color: #fff;
+    padding-left: $basic-padding/2;
+
+    &:focus {
+        outline: none;
+        border-color: $active-color;
+    }
+
+    &:focus::placeholder {
+        color: $active-color;
+    }
+}
+
+.search__button {
+    margin-left: $basic-margin;
+}
