@@ -16,9 +16,10 @@ app.post('/img', async (req, res) => {
     const data = req.body;
     const { endpoint, inputValue, imgsNum, startFrom } = data;
     const key = process.env.GIPHY_KEY;
-    const inputPhrase = inputValue ? `&q=${inputValue.split(' ').join('+')}` : '';
 
-    const url = `http://api.giphy.com/v1/gifs/${endpoint}?api_key=${key + inputPhrase}&limit=${imgsNum}&offset=${startFrom}`
+    const url = `http://api.giphy.com/v1/gifs/${endpoint}?api_key=${key}${inputValue && `&q=${inputValue.split(' ').join('+')}`}&limit=${imgsNum}&offset=${startFrom}`;
+
+    console.log(url)
 
     const img_response = await fetch(url);
     const img_data = await img_response.json();
