@@ -13,7 +13,6 @@ class Grid {
         galleryItems.forEach(item => {
             const index = window.getComputedStyle(item).order - 1;
             const itemHeight = parseFloat(item.style.height) + parseFloat(window.getComputedStyle(item).marginBottom);
-            console.log(parseFloat(window.getComputedStyle(item).marginBottom))
     
             this.gridColumnsHeight[index] === undefined ? this.gridColumnsHeight[index] = itemHeight : this.gridColumnsHeight[index] += itemHeight ;
         })
