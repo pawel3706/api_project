@@ -1,6 +1,6 @@
 .nav {
-    height: $nav-height;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: $basic-padding 0;
@@ -14,4 +14,8 @@
 
 .nav__search {
     flex-basis: 60%;
+    @media(max-width: 360px) {
+        flex-wrap: wrap;
+    }
 }
+

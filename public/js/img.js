@@ -33,4 +33,12 @@ class Img {
         elem.style.height = `${elemWidth * ratio}px`;
         elem.firstChild.style.height = `${elemWidth * ratio}px`;
     }
+
+    updateImgHeight() {
+        const imgs = document.querySelectorAll('.gallery__item');
+        imgs.forEach(img => {
+            this.setElementHeight(img, img.firstChild.naturalHeight/img.firstChild.naturalWidth);
+        });
+        this.grid.setGalleryHeight();
+    }
 }

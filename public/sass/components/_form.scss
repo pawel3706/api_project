@@ -1,12 +1,14 @@
 .search {
     display: flex;
-    align-items: stretch;
+    align-items: center;
 }
 
 .search__input {
     flex-grow: 1;
     border: 2px solid #fff;
     background-color: #fff;
+    padding: $basic-padding/2 0;
+    margin:  $basic-margin/2 0;
     padding-left: $basic-padding/2;
 
     &:focus {
@@ -20,5 +22,9 @@
 }
 
 .search__button {
-    margin-left: $basic-margin;
+    
+    @media(min-width: 360px) {
+        margin-top: 0;
+        margin-left: $basic-margin;
+    }
 }

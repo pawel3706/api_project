@@ -10,9 +10,9 @@ class Start {
 
         document.querySelector('.footer__button').addEventListener('click', this.showMoreImages.bind(this));
 
-        window.addEventListener('resize', this.setGalleryHeight);
-
         this.img = new Img();
+        window.addEventListener('resize', this.img.updateImgHeight.bind(this.img));
+
         this.init();
     }
 
