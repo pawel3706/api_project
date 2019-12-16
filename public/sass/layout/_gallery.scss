@@ -6,34 +6,60 @@
 }
 
 .gallery__item {
-    width: calc(25% - 9px);
     margin-bottom: 12px;
     background-color: $active-color;
+}
 
-    &:nth-of-type(4n+1) {
+@media(max-width: 575px) {
+    .gallery__item {
+        width: calc(50% - 6px);
+
+        &:nth-of-type(2n+1) {
+            order: 1;
+        }
+        &:nth-of-type(2n+2) {
+            order: 2;
+        }
+    }
+
+    .gallery__break-line {
+        flex-basis: 100%;
+        width: 0;
         order: 1;
-    }
-    &:nth-of-type(4n+2) {
-        order: 2;
-    }
-    &:nth-of-type(4n+3) {
-        order: 3;
-    }
-    &:nth-of-type(4n) {
-        order: 4;
     }
 }
 
-.gallery__break-line {
-    flex-basis: 100%;
-    width: 0;
-    &:nth-last-child(3) {
-        order: 1;
+@media(min-width: 575px) {
+    .gallery__item {
+        width: calc(25% - 9px);
+        
+        &:nth-of-type(4n+1) {
+            order: 1;
+        }
+        &:nth-of-type(4n+2) {
+            order: 2;
+        }
+        &:nth-of-type(4n+3) {
+            order: 3;
+        }
+        &:nth-of-type(4n) {
+            order: 4;
+        }
     }
-    &:nth-last-child(2) {
-        order: 2;
-    }
-    &:nth-last-child(1) {
-        order: 3;
+    .gallery__break-line {
+        flex-basis: 100%;
+        width: 0;
+        &:nth-last-child(3) {
+            order: 1;
+        }
+        &:nth-last-child(2) {
+            order: 2;
+        }
+        &:nth-last-child(1) {
+            order: 3;
+        }
     }
 }
+
+
+
