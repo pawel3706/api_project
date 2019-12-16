@@ -3,3 +3,13 @@
     display: flex;
     justify-content: center;
 }
+
+@media(max-width: 375px) {
+    .footer {
+        justify-content: stretch;
+    }
+
+    .footer__button {
+        flex-grow: 1;
+    }
+}

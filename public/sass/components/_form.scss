@@ -9,6 +9,7 @@
     background-color: #fff;
     padding: $basic-padding/2 0;
     margin:  $basic-margin/2 0;
+    margin-right: $basic-margin;
     padding-left: $basic-padding/2;
 
     &:focus {
@@ -21,10 +22,19 @@
     }
 }
 
-.search__button {
-    
-    @media(min-width: 360px) {
-        margin-top: 0;
-        margin-left: $basic-margin;
+@media(max-width: 575px) {
+    .search {
+        margin-top: $basic-margin;
+    }
+}
+
+@media(max-width: 375px) {
+    .search {
+        flex-direction: column;
+        align-items: stretch;
+        margin: $basic-margin 0; 
+    }
+    .search__input {
+       margin-right: 0;
     }
 }
